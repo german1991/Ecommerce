@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Ecommerce - Tienda de Ropa Deportiva</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="https://via.placeholder.com/150x50?text=Logo" alt="Logo Tienda">
+    </div>
+    <div class="cart">
+      <button id="cartButton" onclick="toggleCart()">Carrito (<span id="cartCount">0</span>)</button>
+    </div>
+  </header>
+
+  <!-- Banner debajo del navbar -->
+  <section class="banner">
+    <h2>¡Oferta Especial! 20% de descuento en toda la tienda</h2>
+    <button class="shop-now-btn">Compra Ahora</button>
+  </section>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Bienvenido a la Tienda de Ropa Deportiva</h1>
+      <p>Encuentra las mejores marcas como Nike, Adidas, y más.</p>
+      <button class="shop-now-btn">Comprar Ahora</button>
+    </div>
+  </section>
+
+  <!-- Productos -->
+  <section class="products">
+    <h2>Productos Destacados</h2>
+    <div class="product-grid">
+      <div class="product" data-id="1">
+        <img src="https://via.placeholder.com/300" alt="Producto 1">
+        <h3>Producto 1</h3>
+        <p>Ropa deportiva de alta calidad.</p>
+        <p>$100.00</p>
+        <button onclick="addToCart(1, 'Producto 1', 100)">Agregar al Carrito</button>
+      </div>
+      <div class="product" data-id="2">
+        <img src="https://via.placeholder.com/300" alt="Producto 2">
+        <h3>Producto 2</h3>
+        <p>Comodidad y estilo en un solo producto.</p>
+        <p>$120.00</p>
+        <button onclick="addToCart(2, 'Producto 2', 120)">Agregar al Carrito</button>
+      </div>
+      <div class="product" data-id="3">
+        <img src="https://via.placeholder.com/300" alt="Producto 3">
+        <h3>Producto 3</h3>
+        <p>Diseño innovador para los deportistas.</p>
+        <p>$150.00</p>
+        <button onclick="addToCart(3, 'Producto 3', 150)">Agregar al Carrito</button>
+      </div>
+      <div class="product" data-id="4">
+        <img src="https://via.placeholder.com/300" alt="Producto 4">
+        <h3>Producto 4</h3>
+        <p>Maximiza tu rendimiento con este producto.</p>
+        <p>$130.00</p>
+        <button onclick="addToCart(4, 'Producto 4', 130)">Agregar al Carrito</button>
+      </div>
+      <div class="product" data-id="5">
+        <img src="https://via.placeholder.com/300" alt="Producto 5">
+        <h3>Producto 5</h3>
+        <p>Comodidad garantizada para el día a día.</p>
+        <p>$110.00</p>
+        <button onclick="addToCart(5, 'Producto 5', 110)">Agregar al Carrito</button>
+      </div>
+      <div class="product" data-id="6">
+        <img src="https://via.placeholder.com/300" alt="Producto 6">
+        <h3>Producto 6</h3>
+        <p>Estilo y confort en cada paso.</p>
+        <p>$125.00</p>
+        <button onclick="addToCart(6, 'Producto 6', 125)">Agregar al Carrito</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popup Carrito -->
+  <section id="cart" class="cart-popup">
+    <h2>Tu Carrito</h2>
+    <ul id="cartItems"></ul>
+    <p>Total: $<span id="totalPrice">0</span></p>
+    <button onclick="clearCart()">Vaciar Carrito</button>
+    <button onclick="toggleCart()">Cerrar</button>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2024 Tienda Deportiva. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
